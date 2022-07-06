@@ -1,24 +1,44 @@
-# README
+## Share Blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Share-blog Is a website blog where people accross the world can share and discuss about the practices and cultures of each country. Built with ruby on rails
 
-Things you may want to cover:
+## Built With
 
-* Ruby version
+- Ruby on rails
+- SQL
 
-* System dependencies
+### Prerequisites
 
-* Configuration
+- Ruby
+- Rails
+- PostgreSQL
+- Git/Github
+- VSCode or another equivalent tool
 
-* Database creation
+## Author
 
-* Database initialization
+👤 **Matchoudi**
 
-* How to run the test suite
+- GitHub: [@LionRouge1](https://github.com/LionRouge1)
+- Twitter: [@Matchoudi1](https://twitter.com/Matchoudi1)
+- LinkedIn: [matchoudi](https://linkedin.com/in/matchoudi)
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## 🤝 Contributing
 
-* ...
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Original design idea by Nelson Sakwa on Behance
+- Microverse
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
