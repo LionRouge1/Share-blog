@@ -5,7 +5,7 @@ class Post < ApplicationRecord
 
   def update_post_counter
     count = Post.where(user: :user).count
-    self.user.update(postsCounter: count)
+    user.update(postsCounter: count)
   end
 
   def most_recent_comments(post)

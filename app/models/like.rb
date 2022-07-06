@@ -4,6 +4,6 @@ class Like < ApplicationRecord
 
   def update_like_counter
     count = Post.where(:like).count
-    self.like.update(likesCounter: count)
+    like.update(likesCounter: count)
   end
 end

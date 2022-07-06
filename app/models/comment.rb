@@ -4,7 +4,6 @@ class Comment < ApplicationRecord
 
   def update_comment_counter
     count = Comment.where(user: :user).count
-    self.post.update(commentsCounter: count)
+    post.update(commentsCounter: count)
   end
 end
-
