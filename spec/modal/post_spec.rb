@@ -7,13 +7,6 @@ RSpec.describe Post, type: :model do
 
     let(:comment) { Comment.create(user: user1, post: subject, text: 'Very wird')}
 
-    
-
-    before do
-        user1.save!
-        subject.save!
-    end
-
     it "title should be present" do
         subject.title = nil
         expect(subject).to_not be_valid

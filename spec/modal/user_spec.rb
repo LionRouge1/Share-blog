@@ -6,7 +6,6 @@ RSpec.describe User, type: :model do
 
     before do
         subject.save
-        post.save
     end
 
     it 'User name should be present' do
