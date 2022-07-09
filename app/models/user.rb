@@ -7,6 +7,6 @@ class User < ApplicationRecord
     posts.order(created_at: :desc).limit(3)
   end
 
-  validates :name, presence: true, length: { in: 2..100, message: 'Should be in range of 2 to 100'}
-  validates :postsCounter, numericality: {only_integer: true, greater_than_or_equal_to: 0}
+  validates :name, presence: true, length: { in: 2..100, message: 'Should be in range of 2 to 100' }
+  validates :postsCounter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 end
