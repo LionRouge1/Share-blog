@@ -33,18 +33,6 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
- 
- # .gitignore
- node_modules/
 
- In this PR I :
-
-- Created a new app. Give it a meaningful name.
-- Initialized the project with Git.
-- Make sure that the project has Postgres database set up.
-- Built the project schema.
-    - Created and ran the necessary migration files.
-    - Table and column names should match the ERD diagram.
-        - note: photo for users table should be a link to an image
-    - Foreign keys should be included.
-    - All columns that are foreign keys have a corresponding index.
+# .gitignore
+node_modules/
