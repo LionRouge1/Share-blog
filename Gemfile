@@ -5,6 +5,10 @@ ruby '2.7.4'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.3'
+gem 'net-http'
+
+# install rspec-rails
+gem 'rspec-rails', '~> 4.0.0.beta2'
 
 # Install rubocop
 gem 'rubocop', '>= 1.0', '< 2.0'
