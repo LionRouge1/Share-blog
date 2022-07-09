@@ -39,8 +39,8 @@ RSpec.describe Post, type: :model do
         expect(user1.postsCounter).to eq(1)
     end
 
-    it 'Should show most recent post' do 
-        posts = subject.most_recent_comments
-        expect(posts.include?(comment)).to be_truthy
+    it 'Should show most recent comments' do 
+        comments = subject.most_recent_comments
+        expect(comments.include?(comment)).to be_truthy
     end
 end
