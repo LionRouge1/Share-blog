@@ -4,6 +4,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    @patient = Post.find(params[:id])
+    @patient = 'Some text here'
   end
 end
