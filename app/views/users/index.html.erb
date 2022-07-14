@@ -1,6 +1,6 @@
 <h1>User pages </h1>
 <% @users.each do |item| %>
-   <%= link_to "users/#{item.id}" do%>
+   <%= link_to user_path(item) do%>
       <div>
       <span><img src=<%= item.photo %>></span>
       <span>

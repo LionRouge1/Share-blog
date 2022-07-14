@@ -17,10 +17,7 @@
       </div>
       <% end %>
       <div>
-         <% 
-            comments = item.most_recent_comments
-            comments.each do |comment| 
-         %>
+         <% item.most_recent_comments.each do |comment| %>
             <p><%= comment.user.name + ': ' + comment.text %></p>
          <% end %>
       </div>
