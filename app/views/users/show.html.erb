@@ -17,5 +17,5 @@
       </div>
    <%end%>
  </span>
- <%= link_to 'See all posts', user_posts_path(@user)  if can_be_show?(@posts) %>
+ <%= link_to 'See all posts', user_posts_path(@user)  unless can_be_show?(@posts) %>
 </div> 
