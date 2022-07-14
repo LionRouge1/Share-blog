@@ -15,6 +15,20 @@ Share-blog Is a website blog where people accross the world can share and discus
 - Git/Github
 - VSCode or another equivalent tool
 
+## Getting Started
+
+Run  ``` bundle install ``` to install the dependancies.
+
+Run ``` rails db:create ``` to create the database.
+
+Run ``` rails db:seed ``` to save some initial data from the seeds.rb file
+
+Run ``` rails s ```  or ``` rails ``` server to start the server.
+
+Open ``` http://localhost:3000 ``` in your browser.
+
+Run ``` bundle exec rspec ``` to run the tests.
+
 ## Author
 
 👤 **Matchoudi**
