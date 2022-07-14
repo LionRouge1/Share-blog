@@ -1,10 +1,12 @@
 <h1>User pages </h1>
 <% @users.each do |item| %>
-   <div>
-    <span><%= item.photo %></span>
-    <span>
-     <h3><%= item.name %></h3>
-     <p>Number of post: <%= item.postsCounter %> </p>
-    </span>
-   </div> 
+   <%= link_to "users/#{item.id}" do%>
+      <div>
+      <span><img src=<%= item.photo %>></span>
+      <span>
+      <h3><%= item.name %></h3>
+      <p>Number of post: <%= item.postsCounter %> </p>
+      </span>
+      </div>
+   <% end %>
 <% end %>
