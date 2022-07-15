@@ -79,3 +79,7 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'rspec-rails'
 end
+
+# Installation of bootstrap
+gem 'bootstrap', '~> 5.1.3'
+gem "bootstrap_form", "~> 5.1"
