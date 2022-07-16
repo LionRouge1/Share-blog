@@ -1,9 +1,10 @@
 <%= render partial: "message"%>
 <div class="container">
   <h1>A single post</h1>
-  <div>
+  <div class="w-50">
     <p>post #1 by <%= @post.user.name %></p>
     <p class="text"><%= @post.text %></p>
+    <blockquote class="text-end">Comments: <%= @post.commentsCounter%> Likes: <%= @post.likesCounter %></blockquote>
     <p><%= link_to "Comment", new_user_post_comment_path(user_id: @post.user_id, post_id: @post.id), class: "btn btn-dark" %>
     <%= form_with model: @like, url: user_post_likes_path(post_id: @post.id) do |f| %>
       <%= f.submit "Like" %>
