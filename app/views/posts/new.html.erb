@@ -1,0 +1,6 @@
+<h1> Add a new post <h2>
+<%= bootstrap_form_with(model: @post, url: user_posts_path(@user)) do |f| %>
+  <%= f.text_field :title %>
+  <%= f.text_area :text %>
+  <%= f.submit "submit" %>
+<% end %>

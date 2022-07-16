@@ -1,3 +1,4 @@
+<% render partial: "message" %>
 <h1>Show posts</h1>
 <div>
  <span><img src=<%= @user.photo %>></span>
@@ -5,6 +6,7 @@
   <h3><%= @user.name %></h3>
   <span>Number of post: <%= @user.postsCounter %></span>
   <p><%= @user.bio %></p>
+  <%= link_to "Add a post", new_user_post_path(@user) %>
  </span>
  <span>
    <% counter = 0%>
