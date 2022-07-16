@@ -6,6 +6,8 @@ Share-blog Is a website blog where people accross the world can share and discus
 
 - Ruby on rails
 - SQL
+- HTML
+- Bootstrap
 
 ### Prerequisites
 

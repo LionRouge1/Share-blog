@@ -1,12 +1,16 @@
-<h1>User pages </h1>
-<% @users.each do |item| %>
-   <%= link_to user_path(item) do%>
-      <div>
-      <span><img src=<%= item.photo %>></span>
-      <span>
-      <h3><%= item.name %></h3>
-      <p>Number of post: <%= item.postsCounter %> </p>
-      </span>
-      </div>
+<div class="container">
+   <h1>User pages </h1>
+   <% @users.each do |item| %>
+      <%= link_to user_path(item) do%>
+         <div class="row m-2 border w-50">
+            <div class="col-sm-2">
+               <img src=<%= item.photo %> alt="User picture" class="w-100 h-100">
+            </div>
+            <div class="col-sm-5 text-body">
+               <h3><%= item.name %></h3>
+               <blockquote class="text-end">Number of post: <%= item.postsCounter %></blockquote>
+            </div>
+         </div>
+      <% end %>
    <% end %>
-<% end %>
+</div>
