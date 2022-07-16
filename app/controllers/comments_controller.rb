@@ -5,8 +5,7 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = Comment.create(comment_params)
-    @comment.user = @user
+    @comment = @user.comments.create(comment_params)
     @post = Post.find(params[:post_id])
     @comment.post = @post
     puts 'tototo'

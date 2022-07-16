@@ -7,6 +7,8 @@ Rails.application.routes.draw do
       resources :likes, only: [:create, :destroy]
     end
   end
+
+  root 'users#index'
   # Defines the root path route ("/")
   # root "articles#index"
 end
