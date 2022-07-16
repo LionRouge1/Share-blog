@@ -14,7 +14,7 @@ class PostsController < ApplicationController
     @user = User.find(params[:user_id])
   end
 
-  def create 
+  def create
     @post = Post.create(post_params)
     @post.user = @user
     @post.likesCounter = 0
