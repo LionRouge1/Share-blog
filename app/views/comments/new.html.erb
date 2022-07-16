@@ -1,0 +1,10 @@
+<%= render partial: "/posts/message"%>
+<div>
+    <h1>Add new comment</h1>
+    <%= form_with model: @comment, url: user_post_comments_path(user_id: @user.id, post_id: @post.id) do |f| %>
+        <%= f.label :text %><br>
+        <%= f.text_area :text, cols: 30, rows: 5 %><br>
+        <%= f.submit "Submit", class: "form_btn" %>
+    <% end %>
+</div>
+ <%= @user.name %>
