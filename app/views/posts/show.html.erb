@@ -1,15 +1,17 @@
 <%= render partial: "message"%>
-<h1>A single post</h1>
-<div>
-  <p>post #1 by <%= @post.user.name %></p>
-  <p class="text"><%= @post.text %></p>
-  <%= link_to "Comment", new_user_post_comment_path(user_id: @post.user_id, post_id: @post.id) %>
-  <%= form_with model: @like, url: user_post_likes_path(post_id: @post.id) do |f| %>
-    <%= f.submit "Like" %>
-  <% end %>
-</div>
-<div>
-    <% @comments.each do |comment| %>
-        <p><%= comment.user.name + ': ' + comment.text %></p>
-    <% end %>
+<div class="container">
+  <h1>A single post</h1>
+  <div>
+    <p>post #1 by <%= @post.user.name %></p>
+    <p class="text"><%= @post.text %></p>
+    <p><%= link_to "Comment", new_user_post_comment_path(user_id: @post.user_id, post_id: @post.id), class: "btn btn-dark" %>
+    <%= form_with model: @like, url: user_post_likes_path(post_id: @post.id) do |f| %>
+      <%= f.submit "Like" %>
+    <% end %></p>
+  </div>
+  <div>
+      <% @comments.each do |comment| %>
+          <p><%= comment.user.name + ': ' + comment.text %></p>
+      <% end %>
+  </div>
 </div>
