@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   scope 'users/:user_id', as: 'user' do
     resources :posts, only: [:index, :show]
   end
-  resources :users, only: [:index, :show]
+  # resources :users, only: [:index, :show]
   # Defines the root path route ("/")
   # root "articles#index"
 end
