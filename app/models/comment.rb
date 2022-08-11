@@ -1,9 +1,12 @@
 class Comment < ApplicationRecord
-  belongs_to :post
-  belongs_to :user
+  belongs_to :post, class_name: 'Post', foreign_key: :post_id
+  belongs_to :user, class_name: 'User', foreign_key: :user_id
+
+  after_save :update_comment_counter
 
   def update_comment_counter
-    count = Comment.where(user: :user).count
-    post.update(commentsCounter: count)
+    post.update(commentsCounter: post.comments.count)
   end
+
+  validates :text, presence: true
 end
