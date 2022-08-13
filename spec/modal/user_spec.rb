@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-
   subject { User.new(name: 'Harry', photo: 'photo/link.com', bio: 'description', postsCounter: 0) }
   let(:post) do
     Post.create(user: subject, title: 'Hello', text: 'This is my first post', commentsCounter: 0, likesCounter: 0)
@@ -30,5 +29,4 @@ RSpec.describe User, type: :model do
     posts = subject.recent_post
     expect(posts.include?(post)).to be_truthy
   end
-  
 end
