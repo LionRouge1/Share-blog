@@ -82,12 +82,12 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
-    childprocess (4.1.0)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
     debug (1.5.0)
       irb (>= 1.3.6)
       reline (>= 0.2.7)
+    diff-lcs (1.5.0)
     digest (3.1.0)
     erubi (1.10.0)
     globalid (1.0.0)
@@ -115,6 +115,8 @@ GEM
     mini_mime (1.1.2)
     minitest (5.16.2)
     msgpack (1.5.3)
+    net-http (0.2.2)
+      uri
     net-imap (0.2.3)
       digest
       net-protocol
@@ -157,6 +159,10 @@ GEM
       activesupport (= 7.0.3)
       bundler (>= 1.15.0)
       railties (= 7.0.3)
+    rails-controller-testing (1.0.5)
+      actionpack (>= 5.0.1.rc1)
+      actionview (>= 5.0.1.rc1)
+      activesupport (>= 5.0.1.rc1)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
@@ -176,7 +182,24 @@ GEM
     reline (0.3.1)
       io-console (~> 0.5)
     rexml (3.2.5)
-    rubocop (1.31.1)
+    rspec-core (3.11.0)
+      rspec-support (~> 3.11.0)
+    rspec-expectations (3.11.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.11.0)
+    rspec-mocks (3.11.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.11.0)
+    rspec-rails (4.0.2)
+      actionpack (>= 4.2)
+      activesupport (>= 4.2)
+      railties (>= 4.2)
+      rspec-core (~> 3.10)
+      rspec-expectations (~> 3.10)
+      rspec-mocks (~> 3.10)
+      rspec-support (~> 3.10)
+    rspec-support (3.11.0)
+    rubocop (1.31.2)
       json (~> 2.3)
       parallel (~> 1.10)
       parser (>= 3.1.0.0)
@@ -189,12 +212,6 @@ GEM
     rubocop-ast (1.18.0)
       parser (>= 3.1.1.0)
     ruby-progressbar (1.11.0)
-    rubyzip (2.3.2)
-    selenium-webdriver (4.3.0)
-      childprocess (>= 0.5, < 5.0)
-      rexml (~> 3.2, >= 3.2.5)
-      rubyzip (>= 1.2.2, < 3.0)
-      websocket (~> 1.0)
     sprockets (4.1.1)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -214,16 +231,12 @@ GEM
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.2.0)
+    uri (0.11.0)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
       railties (>= 6.0.0)
-    webdrivers (5.0.0)
-      nokogiri (~> 1.6)
-      rubyzip (>= 1.3.0)
-      selenium-webdriver (~> 4.0)
-    websocket (1.2.9)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -240,18 +253,19 @@ DEPENDENCIES
   debug
   importmap-rails
   jbuilder
+  net-http
   pg (~> 1.4)
   puma (~> 5.0)
   rails (~> 7.0.3)
+  rails-controller-testing
   redis (~> 4.0)
+  rspec-rails
   rubocop (>= 1.0, < 2.0)
-  selenium-webdriver
   sprockets-rails
   stimulus-rails
   turbo-rails
   tzinfo-data
   web-console
-  webdrivers
 
 RUBY VERSION
    ruby 2.7.4p191

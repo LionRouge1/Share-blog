@@ -4,7 +4,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.4'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
+gem 'net-http'
 gem 'rails', '~> 7.0.3'
+
+# install rspec-rails
+# gem 'capybara'
+# gem 'rspec-rails'
+# gem 'rails-controller-testing'
 
 # Install rubocop
 gem 'rubocop', '>= 1.0', '< 2.0'
@@ -67,9 +73,9 @@ group :development do
   # gem "spring"
 end
 
-group :test do
+group :development, :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
-  gem 'selenium-webdriver'
-  gem 'webdrivers'
+  gem 'rails-controller-testing'
+  gem 'rspec-rails'
 end
