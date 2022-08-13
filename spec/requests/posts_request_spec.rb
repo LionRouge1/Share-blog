@@ -1,9 +1,5 @@
 require 'rails_helper'
 
-<<<<<<< HEAD
-# RSpec.describe 'Posts', type: :request do
-# end
-=======
 RSpec.describe 'Posts', type: :request do
   describe 'GET #index' do
     before(:example) { get users_path }
@@ -27,4 +23,3 @@ RSpec.describe 'Posts', type: :request do
     end
   end
 end
->>>>>>> 17519aca2181ad41a1094a7d3c51060d2ec79e94
