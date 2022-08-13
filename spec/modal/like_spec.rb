@@ -5,6 +5,7 @@ RSpec.describe Like, type: :modal do
   let(:post) do
     Post.create(user: user, title: 'Hello', text: 'This is my first post', commentsCounter: 0, likesCounter: 0)
   end
+
   let(:like) { Like.create(post: post, user: user) }
 
   it 'Should update likes counter' do

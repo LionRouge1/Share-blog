@@ -13,8 +13,8 @@ class Post < ApplicationRecord
     comments.order(created_at: :desc).limit(5)
   end
 
-  validates :title, presence: true, length: { maximum: 255,
-                                              too_long: '255 characters is the maximum allowed' }
+  validates :title, presence: true, length: { maximum: 250,
+                                              too_long: '250 characters is the maximum allowed' }
   validates :commentsCounter, numericality: { only_integer: true,
                                               greater_than_or_equal_to: 0 }
   validates :likesCounter, numericality: { only_integer: true,
