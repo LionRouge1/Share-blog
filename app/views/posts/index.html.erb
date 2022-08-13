@@ -1,0 +1,27 @@
+<h1>Show posts</h1>
+<div>
+ <span><img src=<%= @user.photo %>></span>
+ <span>
+  <h3><%= @user.name %></h3>
+  <span>Number of post: <%= @user.postsCounter %></span>
+  <p><%= @user.bio %></p>
+ </span>
+ <span>
+   <% counter = 0%>
+   <% @posts.each do |item| %>
+      <%= link_to user_post_path(@user, item) do %>
+      <div>
+         <p>Post #<%= counter += 1 %></p>
+         <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. <%= item.text %></p>
+         <p>Comments: <%= item.commentsCounter%> Likes: <%= item.likesCounter %>
+      </div>
+      <% end %>
+      <div>
+         <% item.most_recent_comments.each do |comment| %>
+            <p><%= comment.user.name + ': ' + comment.text %></p>
+         <% end %>
+      </div>
+   <%end%>
+ </span>
+ <button>Pagination</button>
+</div> 
