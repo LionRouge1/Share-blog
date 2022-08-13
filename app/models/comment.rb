@@ -6,4 +6,5 @@ class Comment < ApplicationRecord
     count = Comment.where(user: :user).count
     post.update(commentsCounter: count)
   end
+  
 end
