@@ -8,5 +8,5 @@ class Comment < ApplicationRecord
     post.update(commentsCounter: post.comments.count)
   end
 
-  validates :text, presence: true
+  validates :text, presence: true, length: { minimum: 2 }
 end
