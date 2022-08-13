@@ -1,9 +1,11 @@
 class PostsController < ApplicationController
-    def index
-        @my_post = ['First post', 'second post', 'I think it\'s okay']
-    end
+  def index
+    @user = User.find(params[:user_id])
+    @posts = Post.where(user: @user).order(created_at: :desc)
+  end
 
-    def show
-        @patient = Post.find(params[:id])
-    end
+  def show
+    @post = Post.find(params[:id])
+    @comments = Comment.where(post: @post)
+  end
 end
