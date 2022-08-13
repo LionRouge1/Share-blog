@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
+
   let(:user1) { User.create(name: 'Atawu', photo: 'https://unsplash.com/photos/F_ksks', bio: 'Teacher from Ghana.', postsCounter: 0) }
 
   let(:subject) do
@@ -38,4 +39,5 @@ RSpec.describe Post, type: :model do
     comments = subject.most_recent_comments
     expect(comments.include?(comment)).to be_truthy
   end
+  
 end
