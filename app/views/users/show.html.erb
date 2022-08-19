@@ -1,12 +1,12 @@
 <h1>Show users </h1>
 
 <div>
- <span><%= @user.photo %></span>
- <span>
+ <div><%= @user.photo %></div>
+ <div>
   <h3><%= @user.name %></h3>
-  <span>Number of post: <%= @user.postsCounter %></span>
+  <div>Number of post: <%= @user.postsCounter %></div>
   <p><%= @user.bio %></p>
- </span>
+ </div>
  <% @posts.each do |item|%>
     <p><%= item.title %></p>
  <%end%>
