@@ -1,13 +1,13 @@
 <h1>Show users </h1>
 
 <div>
- <span><img src=<%= @user.photo %>></span>
- <span>
+ <div><img src=<%= @user.photo %>></div>
+ <div>
   <h3><%= @user.name %></h3>
-  <span>Number of post: <%= @user.postsCounter %></span>
+  <div>Number of post: <%= @user.postsCounter %></div>
   <p><%= @user.bio %></p>
- </span>
- <span>
+ </div>
+ <div>
    <% counter = 0%>
    <% @posts.each do |item|%>
       <div>
@@ -16,6 +16,6 @@
          <p>Comments: <%= item.commentsCounter%> Likes: <%= item.likesCounter %>
       </div>
    <%end%>
- </span>
+ </div>
  <%= link_to 'See all posts', user_posts_path(@user)  unless can_be_show?(@posts) %>
 </div> 

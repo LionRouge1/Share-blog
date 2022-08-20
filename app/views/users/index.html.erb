@@ -2,11 +2,11 @@
 <% @users.each do |item| %>
    <%= link_to user_path(item) do%>
       <div>
-      <span><img src=<%= item.photo %>></span>
-      <span>
+      <div><img src=<%= item.photo %>></div>
+      <div>
       <h3><%= item.name %></h3>
       <p>Number of post: <%= item.postsCounter %> </p>
-      </span>
+      </div>
       </div>
    <% end %>
 <% end %>
