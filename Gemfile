@@ -82,4 +82,4 @@ end
 
 # Installation of bootstrap
 gem 'bootstrap', '~> 5.1.3'
-gem "bootstrap_form", "~> 5.1"
+gem 'bootstrap_form', '~> 5.1'
