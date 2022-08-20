@@ -16,6 +16,7 @@ RSpec.describe 'Posts', type: :request do
     before(:example) { get('/users/') }
     it 'Is a sucess' do
       expect(response).to have_http_status(:ok)
+      expect(response.body).to include("User pages")
     end
   end
 end
