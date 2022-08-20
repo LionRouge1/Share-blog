@@ -13,13 +13,10 @@ RSpec.describe 'Posts', type: :request do
   end
 
   describe 'GET #show' do
-    before(:example) { get('/users/3/posts/2') }
+    before(:example) { get('/users/') }
     it 'Is a sucess' do
       expect(response).to have_http_status(:ok)
-    end
-
-    it 'renders show template' do
-      expect(response).to render_template('posts/show')
+      expect(response.body).to include('User pages')
     end
   end
 end

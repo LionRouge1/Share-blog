@@ -1,7 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  subject { User.new(name: 'Harry', photo: 'photo/link.com', bio: 'description', postsCounter: 0) }
+  # spec test for user
+  subject do
+    User.new(name: 'Harry', photo: 'photo/link.com', bio: 'description', postsCounter: 0)
+  end
   let(:post) do
     Post.create(user: subject, title: 'Hello', text: 'This is my first post', commentsCounter: 0, likesCounter: 0)
   end
