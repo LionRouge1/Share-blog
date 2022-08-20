@@ -3,7 +3,8 @@ require 'rails_helper'
 RSpec.describe Post, type: :model do
   # spec test for post
   let(:user1) do
-     User.create(name: 'Atawu', photo: 'https://unsplash.com/photos/F_ksks', bio: 'Teacher from Ghana.', postsCounter: 0)
+    User.create(name: 'Atawu', photo: 'https://unsplash.com/photos/F_ksks', bio: 'Teacher from Ghana.',
+                postsCounter: 0)
   end
 
   let(:subject) do
