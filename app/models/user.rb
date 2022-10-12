@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
   has_many :comments, dependent: :destroy
   has_many :posts, dependent: :destroy
   has_many :likes, dependent: :destroy
@@ -8,5 +12,4 @@ class User < ApplicationRecord
   end
 
   validates :name, presence: true, length: { in: 2..100, message: 'Should be in range of 2 to 100' }
-  validates :postsCounter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 end

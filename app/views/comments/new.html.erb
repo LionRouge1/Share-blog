@@ -1,0 +1,8 @@
+<%= render partial: "/posts/message"%>
+<div class="container">
+    <h1>Add new comment</h1>
+    <%= bootstrap_form_with model: @comment, url: user_post_comments_path(user_id: @user.id, post_id: @post.id) do |f| %>
+        <%= f.text_area :text, placeholder: 'Your comment here' %><br>
+        <%= f.submit "Submit", class: "btn btn-secondary" %>
+    <% end %>
+</div>
