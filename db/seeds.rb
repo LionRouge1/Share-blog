@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-first_user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.', postsCounter: 0)
+# first_user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.', postsCounter: 0)
 # second_user = User.create(name: 'Lilly', photo: 'https://images.unsplash.com/photo-1657720209370-bad64cb7c702?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=80&q=50', bio: 'Teacher from Poland.', postsCounter: 0)
 # amina = User.create(name: 'Amina', photo: 'https://images.unsplash.com/photo-1657752729195-6c7a3fbb1b68?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=80&q=50', bio: 'Freaking developer expert in ruby on rails.', postsCounter: 0)
 # matchoudi = User.create(name: 'Matchoudi', photo: 'https://images.unsplash.com/photo-1657672737825-b4c21477798e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0OXx8fGVufDB8fHx8&auto=format&fit=crop&w=80&q=50', bio: 'Greater Actor in Nollywood.', postsCounter: 0)
