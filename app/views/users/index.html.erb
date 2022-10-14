@@ -4,7 +4,7 @@
       <%= link_to user_path(item) do%>
          <div class="row m-2 border w-50">
             <div class="col-sm-2">
-               <%= image_tag(item.avatar_update, size: "150x150", alt: "User avatar") if item.avatar.attached? %>
+               <%= image_tag(item.avatar, size: "150x150", alt: "User avatar") if item.avatar.attached? %>
             </div>
             <div class="col-sm-5 text-body">
                <h3><%= item.name %></h3>
