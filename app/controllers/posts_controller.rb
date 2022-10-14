@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
+  before_action :set_user, only: %w[index new create]
+
   def index
-    @user = User.find(params[:user_id])
     @posts = Post.where(user: @user).order(created_at: :desc)
   end
 
@@ -11,7 +12,6 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    @user = User.find(params[:user_id])
   end
 
   def create
@@ -30,5 +30,9 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:title, :text)
+  end
+
+  def set_user
+    @user = User.find(params[:user_id])
   end
 end

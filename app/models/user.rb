@@ -7,6 +7,12 @@ class User < ApplicationRecord
   has_many :posts, dependent: :destroy
   has_many :likes, dependent: :destroy
 
+  has_one_attached :avatar
+
+  def avatar_update
+    avatar
+  end
+
   def recent_post
     posts.order(created_at: :desc).limit(3)
   end
