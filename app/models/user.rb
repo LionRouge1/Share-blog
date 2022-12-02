@@ -14,6 +14,14 @@ class User < ApplicationRecord
     posts.order(created_at: :desc).limit(3)
   end
 
+  def update_avatar
+    if avatar.attached?
+      avatar
+    else
+      'default_avatar.png'
+    end
+  end
+
   validates :name, presence: true, length: { in: 2..100, message: 'Should be in range of 2 to 100' }
 
   private
@@ -21,7 +29,7 @@ class User < ApplicationRecord
     unless avatar.attached?
       avatar.attach(
         io: File.open(
-          Rails.root.json(
+          Rails.root.join(
             'app', 'assets', 'images', 'default_avatar.png'
           ),
           filename: 'default_avatar.png',
